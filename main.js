@@ -11,7 +11,7 @@ function likeHeart(e) {
   let heart = e.target;
   mimicServerCall()
     .then(function() {
-      heart.innerHTML = heart[FULL_HEART];
+      heart.innerHTML = [FULL_HEART];
       heart.classList.add("activated-heart")
     })
     .catch(function() {
