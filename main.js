@@ -14,7 +14,7 @@ function likeHeart(e) {
       if (heart.innerHTML == [EMPTY_HEART]) {
         heart.innerHTML = [FULL_HEART];
         heart.classList.add("activated-heart");
-      else
+    }  else {
         heart.innerHTML = [EMPTY_HEART];
         heart.classList.remove("activated-heart")
       }
