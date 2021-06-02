@@ -11,8 +11,13 @@ function likeHeart(e) {
   let heart = e.target;
   mimicServerCall()
     .then(function() {
-      heart.innerHTML = [FULL_HEART];
-      heart.classList.add("activated-heart")
+      if (heart.innerHTML == [EMPTY_HEART]) {
+        heart.innerHTML = [FULL_HEART];
+        heart.classList.add("activated-heart")
+      else
+        heart.innerHTML = [EMPTY_HEART];
+        heart.classList.remove("activated-heart")
+      }
     })
     .catch(function() {
       const element = document.getElementById("modal");
