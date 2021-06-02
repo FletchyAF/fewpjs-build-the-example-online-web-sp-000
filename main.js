@@ -22,7 +22,7 @@ function likeHeart(e) {
     .catch(function() {
       const element = document.getElementById("modal");
       element.classList.remove("hidden");
-      element.innerHTML = [Promise.reject.message];
+      element.innerHTML = [reject.message];
       setTimeout(function() {
         document.getElementById("modal").classList.add("hidden")
       }, 3000)
