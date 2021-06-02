@@ -19,10 +19,10 @@ function likeHeart(e) {
         heart.classList.remove("activated-heart")
       }
     })
-    .catch(function() {
+    .catch(function(reject) {
       const element = document.getElementById("modal");
       element.classList.remove("hidden");
-      element.innerHTML = [reject.message];
+      element.innerHTML = [reject];
       setTimeout(function() {
         document.getElementById("modal").classList.add("hidden")
       }, 3000)
